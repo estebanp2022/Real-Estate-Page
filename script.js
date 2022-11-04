@@ -16,16 +16,3 @@ getPhotos().then((photos) => {
     `;
   storyBackground.style.backgroundImage = `url(${photos[3].urls.regular})`;
 });
-
-// getPhotos().then((photos) => {
-//   console.log(photos);
-//   img1.style.backgroundImage = `url(
-//     ${photos[0].urls.small}
-//     )`;
-//   img2.style.backgroundImage = `url(
-//     ${photos[1].urls.small}
-//     )`;
-//   images.style.backgroundImage = `url(
-//     ${photos[3].urls.regular}
-//     )`;
-// });
