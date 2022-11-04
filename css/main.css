@@ -1,0 +1,55 @@
+@import "sidebar.css";
+@import "header.css";
+@import "features.css";
+@import "footer.css";
+@import "gallery.css";
+@import "homes.css";
+@import "realtors.css";
+@import "story.css";
+@import "typography.css";
+
+/* variables */
+:root {
+  --main: "Roboto", sans-serif;
+  --header: "Cinzel Decorative", cursive;
+
+  --primary: #c69963;
+  --primary-dark: #b28451;
+
+  --secondary: #101d2c;
+
+  --light-grey-1: #f9f7f6;
+  --light-grey-2: #aaa;
+
+  --dark-grey-1: #54483a;
+  --dark-grey-2: #6d5d4b;
+
+  --bp-largest: 75em; /*1200px*/
+  --bp-large: 62.5em; /*1000px*/
+  --bp-medium: 50em; /*800px*/
+  --bp-small: 37.5em; /*600px*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /*10px/16px = 62.5% -> 1rem = 10px*/
+}
+
+body {
+  font-family: var(--main);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
+}
