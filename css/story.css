@@ -1,7 +1,7 @@
 .story-pictures {
   background-color: var(--primary);
   grid-column: full-start / col-end 4;
-  /* filter: linear-gradient(rgba(#c69963, 0.5), rgba(#c69963, 0.5)); */
+
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
