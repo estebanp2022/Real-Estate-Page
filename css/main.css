@@ -10,35 +10,19 @@
 
 /* variables */
 :root {
-  --main: "Roboto", sans-serif;
+  --main: "Cormorant", serif;
   --header: "Cinzel Decorative", cursive;
 
-  /* --primary: #c69963;
-  --primary-dark: #b28451; */
-
-  --primary: #4b5e42;
+  --primary: #6c7b65;
   --primary-dark: #233a21;
 
-  /* --secondary: #101d2c; */
-
-  --secondary: #171e23;
-
-  /* --light-grey-1: #f9f7f6;
-  --light-grey-2: #aaa; */
+  --secondary: #1a2126;
 
   --light-grey-1: #d3d8d3;
   --light-grey-2: rgb(214, 214, 214);
 
-  /* --dark-grey-1: #54483a;
-  --dark-grey-2: #6d5d4b; */
-
-  --dark-grey-1: #2b362c;
+  --dark-grey-1: #373c37;
   --dark-grey-2: #6d5d4b;
-
-  --bp-largest: 75em; /*1200px*/
-  --bp-large: 62.5em; /*1000px*/
-  --bp-medium: 50em; /*800px*/
-  --bp-small: 37.5em; /*600px*/
 }
 
 * {
@@ -63,4 +47,76 @@ body {
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];
+}
+
+/*1200px*/
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*1000px*/
+@media (max-width: 62.5em) {
+  .container {
+    grid-template-rows: 6rem 60vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [ full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr)
+      [full-end];
+  }
+
+  .sidebar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
+
+/*800px*/
+@media (max-width: 50em) {
+  .container {
+    grid-template-rows: 6rem calc(40vh - 6rem) repeat(6, min-content);
+  }
+
+  .header {
+    grid-column: 1 / -1;
+  }
+
+  .realtors {
+    grid-column: 1 / -1;
+  }
+
+  .team-list {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+
+  .story-pictures {
+    grid-column: 1 / -1;
+  }
+
+  .story-content {
+    grid-column: 1 / -1;
+  }
+
+  .img-1 {
+    width: 65%;
+    grid-row: 1 / 6;
+    grid-column: 2 / 6;
+  }
+  .img-2 {
+    width: 120%;
+    grid-row: 3 / 6;
+    grid-column: 4 / 6;
+  }
+}
+
+/*600px*/
+@media (max-width: 37.5em) {
+  .header {
+    padding: 5rem;
+  }
+  .team-list {
+    grid-template-columns: min-content max-content;
+  }
 }

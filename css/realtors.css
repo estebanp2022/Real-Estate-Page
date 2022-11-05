@@ -10,6 +10,10 @@
   justify-items: center;
 }
 
+.team-name {
+  color: var(--primary);
+}
+
 .team-list {
   display: grid;
   grid-template-columns: min-content max-content;
@@ -23,7 +27,6 @@
 .realtor-img3 {
   width: 7rem;
   height: 7rem;
-  border-radius: 50%;
   display: block;
   object-fit: cover;
 }
@@ -32,6 +35,7 @@
   text-transform: uppercase;
   color: var(--light-grey-2);
   margin-top: 3px;
+  font-size: 1.6rem;
 }
 
 .meet-team {
