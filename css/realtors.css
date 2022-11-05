@@ -1,4 +1,39 @@
 .realtors {
   background-color: var(--secondary);
   grid-column: col-start 7 / full-end;
+  padding: 3rem;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  row-gap: 2rem;
+  justify-items: center;
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  column-gap: 2rem;
+  row-gap: 5vh;
+  align-items: center;
+}
+
+.realtor-img1,
+.realtor-img2,
+.realtor-img3 {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+
+.homes-sold {
+  text-transform: uppercase;
+  color: var(--light-grey-2);
+  margin-top: 3px;
+}
+
+.meet-team {
+  letter-spacing: 4px;
 }

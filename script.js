@@ -19,6 +19,10 @@ let galleryImg11 = document.querySelector(".gallery-img-11");
 let galleryImg12 = document.querySelector(".gallery-img-12");
 let galleryImg13 = document.querySelector(".gallery-img-13");
 let galleryImg14 = document.querySelector(".gallery-img-14");
+let header = document.querySelector(".header");
+let realtor1 = document.querySelector(".realtor-img1");
+let realtor2 = document.querySelector(".realtor-img2");
+let realtor3 = document.querySelector(".realtor-img3");
 
 async function getInteriorPhotos() {
   let response = await fetch(
@@ -39,14 +43,13 @@ getInteriorPhotos().then((photos) => {
 
 async function getHomePhotos() {
   let response = await fetch(
-    "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=luxury-homes&count=20"
+    "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=luxury-homes&count=21"
   );
   let photos = await response.json();
   return photos;
 }
 
 getHomePhotos().then((photos) => {
-  console.log(photos);
   img1.src = `${photos[0].urls.regular}`;
   img2.src = `${photos[1].urls.regular}`;
   img3.src = `${photos[2].urls.regular}`;
@@ -68,4 +71,20 @@ getHomePhotos().then((photos) => {
   galleryImg12.src = `${photos[17].urls.regular}`;
   galleryImg13.src = `${photos[18].urls.regular}`;
   galleryImg14.src = `${photos[19].urls.regular}`;
+  // header.style.backgroundImage = `url(${photos[20].urls.regular})`;
+});
+
+async function getTeamPhotos() {
+  let response = await fetch(
+    "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=female-portrait&count=3"
+  );
+  let photos = await response.json();
+  return photos;
+}
+
+getTeamPhotos().then((photos) => {
+  console.log(photos);
+  realtor1.src = `${photos[0].urls.small}`;
+  realtor2.src = `${photos[1].urls.small}`;
+  realtor3.src = `${photos[2].urls.small}`;
 });

@@ -1,4 +1,7 @@
 .heading-1 {
+  font-size: 4.5rem;
+  color: var(--light-grey-1);
+  line-height: 1;
 }
 
 .heading-2 {

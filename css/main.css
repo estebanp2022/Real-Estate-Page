@@ -13,15 +13,26 @@
   --main: "Roboto", sans-serif;
   --header: "Cinzel Decorative", cursive;
 
-  --primary: #c69963;
-  --primary-dark: #b28451;
+  /* --primary: #c69963;
+  --primary-dark: #b28451; */
 
-  --secondary: #101d2c;
+  --primary: #4b5e42;
+  --primary-dark: #1f572f;
 
-  --light-grey-1: #f9f7f6;
-  --light-grey-2: #aaa;
+  /* --secondary: #101d2c; */
 
-  --dark-grey-1: #54483a;
+  --secondary: #171e23;
+
+  /* --light-grey-1: #f9f7f6;
+  --light-grey-2: #aaa; */
+
+  --light-grey-1: #b5c0aa;
+  --light-grey-2: rgb(214, 214, 214);
+
+  /* --dark-grey-1: #54483a;
+  --dark-grey-2: #6d5d4b; */
+
+  --dark-grey-1: #2b362c;
   --dark-grey-2: #6d5d4b;
 
   --bp-largest: 75em; /*1200px*/
@@ -46,7 +57,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 60vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
     [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
