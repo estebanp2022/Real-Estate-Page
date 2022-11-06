@@ -26,6 +26,10 @@
   font-size: 2rem;
 }
 
+.story-text {
+  font-size: 2.5rem;
+}
+
 .btn {
   background-color: var(--primary);
   color: #fff;
@@ -36,6 +40,10 @@
   padding: 1.8rem 3rem;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+.copyright {
+  font-size: 2rem;
 }
 
 .btn:hover {

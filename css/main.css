@@ -1,4 +1,4 @@
-@import "sidebar.css";
+@import "nav.css";
 @import "header.css";
 @import "features.css";
 @import "footer.css";
@@ -32,6 +32,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; /*10px/16px = 62.5% -> 1rem = 10px*/
 }
 
@@ -41,9 +42,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 60vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: min-content 50vw repeat(3, min-content);
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];
@@ -54,6 +55,9 @@ body {
   html {
     font-size: 50%;
   }
+  .footer-item {
+    font-size: 1.6rem;
+  }
 }
 
 /*1000px*/
@@ -61,26 +65,36 @@ body {
   .container {
     grid-template-rows: 6rem 60vh min-content 40vw repeat(3, min-content);
     grid-template-columns:
-      [ full-start] minmax(6rem, 1fr)
+      [full-start] minmax(6rem, 1fr)
       [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
       [center-end] minmax(6rem, 1fr)
       [full-end];
-  }
-
-  .sidebar {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
   }
 }
 
 /*800px*/
 @media (max-width: 50em) {
   .container {
-    grid-template-rows: 6rem calc(40vh - 6rem) repeat(6, min-content);
+    /* grid-template-rows: 6rem calc(40vh - 6rem) repeat(6, min-content); */
+    grid-template-rows: 6rem 80vw repeat(3, min-content);
   }
 
   .header {
     grid-column: 1 / -1;
+  }
+
+  .brand-logo {
+    margin: 0;
+  }
+  .nav-links {
+    justify-content: space-between;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: 50%;
+  }
+
+  .nav-items {
+    letter-spacing: 0;
   }
 
   .realtors {
@@ -109,14 +123,46 @@ body {
     grid-row: 3 / 6;
     grid-column: 4 / 6;
   }
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-item {
+    font-size: 1.2rem;
+  }
 }
 
 /*600px*/
 @media (max-width: 37.5em) {
+  .container {
+    grid-template-rows: 5rem 80rem repeat(3, min-content);
+  }
   .header {
     padding: 5rem;
   }
   .team-list {
     grid-template-columns: min-content max-content;
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .icon-tabler {
+    padding-right: 10px;
+    display: block;
+  }
+  .brand-logo,
+  .nav-links {
+    display: none;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-item {
+    font-size: 1.4rem;
   }
 }

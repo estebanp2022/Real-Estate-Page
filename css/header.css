@@ -11,25 +11,8 @@
   grid-template-columns: minmax(min-content, max-content);
   row-gap: 1.5rem;
   justify-content: center;
+  align-items: end;
   /* filter: opacity(0.8) drop-shadow(0 0 0 #02060b); */
-}
-
-.brand-logo {
-  display: flex;
-  height: 60px;
-  justify-self: center;
-  align-items: center;
-  justify-content: space-around;
-  font-family: var(--header);
-  font-size: 2rem;
-  border-bottom: 1px solid var(--light-grey-2);
-  color: #fff;
-}
-
-.header-logo {
-  padding: 0 5px;
-  height: 3rem;
-  /* filter: opacity(0.8) drop-shadow(0 0 0 #c1b621); */
 }
 
 .header-btn {

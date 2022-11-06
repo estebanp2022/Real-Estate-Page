@@ -17,7 +17,7 @@ Customized with:
 
 ### Screenshot
 
-![](./images/screenshot.png)
+![](./img/screencap.png)
 
 ### Links
 
@@ -27,6 +27,8 @@ Customized with:
 
 - Semantic HTML5 markup
 - CSS custom variables
+- Responsive for desktop, tablet & mobile
+- Active states
 - Flexbox
 - CSS Grid
 - Javascript
