@@ -83,7 +83,7 @@ async function getTeamPhotos() {
 }
 
 getTeamPhotos().then((photos) => {
-  console.log(photos);
+  // console.log(photos);
   realtor1.src = `${photos[0].urls.small}`;
   realtor2.src = `${photos[1].urls.small}`;
   realtor3.src = `${photos[2].urls.small}`;
